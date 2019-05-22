@@ -1,5 +1,5 @@
 ## React Sliding Pane
-Pane that slides out of the window side. Like panes from Google Tag Manager.
+Pane that slides out of the window side. Like panes from Google Tag Manager. But with spreading props to Modal.
 
 Features:
  * Animated open-close

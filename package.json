@@ -1,5 +1,5 @@
 {
-  "name": "react-sliding-pane",
+  "name": "react-sliding-pane-spread-props",
   "version": "3.1.0",
   "description": "Full height sliding pane",
   "main": "dist/react-sliding-pane.js",
@@ -11,7 +11,7 @@
   "registry": "https://registry.npmjs.org/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DimitryDushkin/sliding-pane.git"
+    "url": "git+https://github.com/jamesxoxo/sliding-pane.git"
   },
   "keywords": [
     "react",
@@ -27,12 +27,12 @@
     "dialog",
     "popup"
   ],
-  "author": "Dimitry Dushkin (dndushkin@gmail.com)",
+  "author": "James Coventry (jamescoventryy@gmail.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DimitryDushkin/sliding-pane/issues"
+    "url": "https://github.com/jamesxoxo/sliding-pane/issues"
   },
-  "homepage": "https://github.com/DimitryDushkin/sliding-pane",
+  "homepage": "https://github.com/jamesxoxo/sliding-pane",
   "dependencies": {
     "prop-types": "^15.6.2",
     "react-modal": "^3.1.10",
@@ -56,5 +56,6 @@
     "rollup-plugin-node-resolve": "^4.0.1",
     "rollup-plugin-replace": "^2.1.0",
     "rollup-plugin-uglify": "^6.0.2"
-  }
+  },
+  "private": true
 }
