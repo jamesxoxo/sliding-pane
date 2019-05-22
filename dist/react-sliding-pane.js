@@ -6,22 +6,40 @@ var React = _interopDefault(require('react'));
 var PropTypes = _interopDefault(require('prop-types'));
 var Modal = _interopDefault(require('react-modal'));
 
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
 var CLOSE_TIMEOUT = 500;
-function ReactSlidingPane(_ref) {
-  var isOpen = _ref.isOpen,
-      title = _ref.title,
-      subtitle = _ref.subtitle,
-      onRequestClose = _ref.onRequestClose,
-      onAfterOpen = _ref.onAfterOpen,
-      children = _ref.children,
-      className = _ref.className,
-      overlayClassName = _ref.overlayClassName,
-      closeIcon = _ref.closeIcon,
-      _ref$from = _ref.from,
-      from = _ref$from === void 0 ? 'right' : _ref$from,
-      width = _ref.width;
+function ReactSlidingPane(props) {
+  var isOpen = props.isOpen,
+      title = props.title,
+      subtitle = props.subtitle,
+      onRequestClose = props.onRequestClose,
+      onAfterOpen = props.onAfterOpen,
+      children = props.children,
+      className = props.className,
+      overlayClassName = props.overlayClassName,
+      closeIcon = props.closeIcon,
+      _props$from = props.from,
+      from = _props$from === void 0 ? 'right' : _props$from,
+      width = props.width;
   var directionClass = "slide-pane_from_".concat(from);
-  return React.createElement(Modal, {
+  return React.createElement(Modal, _extends({}, props, {
     className: "slide-pane ".concat(directionClass, " ").concat(className || ''),
     style: {
       content: {
@@ -34,7 +52,7 @@ function ReactSlidingPane(_ref) {
     onAfterOpen: onAfterOpen,
     onRequestClose: onRequestClose,
     contentLabel: "Modal \"".concat(title || '', "\"")
-  }, React.createElement("div", {
+  }), React.createElement("div", {
     className: "slide-pane__header"
   }, React.createElement("div", {
     className: "slide-pane__close",
