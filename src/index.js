@@ -6,22 +6,24 @@ import './index.css';
 
 const CLOSE_TIMEOUT = 500;
 
-export default function ReactSlidingPane({
-    isOpen,
-    title,
-    subtitle,
-    onRequestClose,
-    onAfterOpen,
-    children,
-    className,
-    overlayClassName,
-    closeIcon,
-    from = 'right',
-    width
-}) {
+export default function ReactSlidingPane(props) {
+    const {
+        isOpen,
+        title,
+        subtitle,
+        onRequestClose,
+        onAfterOpen,
+        children,
+        className,
+        overlayClassName,
+        closeIcon,
+        from = 'right',
+        width
+    } = props;
     const directionClass = `slide-pane_from_${from}`;
 
     return <Modal
+        { ...props }
         className={ `slide-pane ${directionClass} ${className || ''}` }
         style={{
             content: { width: width || '80%' }
