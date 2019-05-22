@@ -1,6 +1,6 @@
 {
   "name": "react-sliding-pane-spread-props",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Full height sliding pane",
   "main": "dist/react-sliding-pane.js",
   "scripts": {
